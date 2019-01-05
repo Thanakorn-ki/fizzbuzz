@@ -7,9 +7,26 @@ import (
 )
 
 func TestFizzBuzzShouldSayOne(t *testing.T) {
-	result := fizzbuzz.Say(1)
+	//  Arrange
 	expected := "1"
-	if result != expected {
+
+	// Action
+	result := fizzbuzz.Say(1)
+
+	// Assertion
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(2)
+	expected = "2"
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(58)
+	expected = "58"
+	if expected != result {
 		t.Errorf("it should say %q but get %q", expected, result)
 	}
 }
@@ -17,23 +34,63 @@ func TestFizzBuzzShouldSayOne(t *testing.T) {
 func TestFizzBuzzShouldSayTwo(t *testing.T) {
 	result := fizzbuzz.Say(2)
 	expected := "2"
-	if result != expected {
+	if expected != result {
 		t.Errorf("it should say %q but get %q", expected, result)
 	}
 }
 
-func TestFIzzBuzzShouldSayFizz(t *testing.T) {
+func TestFizzBuzzShouldSayFizz(t *testing.T) {
 	result := fizzbuzz.Say(3)
 	expected := "Fizz"
-	if result != expected {
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(6)
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(39)
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(57)
+	if expected != result {
 		t.Errorf("it should say %q but get %q", expected, result)
 	}
 }
 
-func TestFIzzBuzzShouldSayBuzz(t *testing.T) {
+func TestFizzBuzzShouldSayBuzz(t *testing.T) {
 	result := fizzbuzz.Say(5)
 	expected := "Buzz"
-	if result != expected {
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(10)
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(20)
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+}
+
+func TestFizzBuzzShouldSayFizzBuzz(t *testing.T) {
+	result := fizzbuzz.Say(15)
+	expected := "FizzBuzz"
+	if expected != result {
+		t.Errorf("it should say %q but get %q", expected, result)
+	}
+
+	result = fizzbuzz.Say(30)
+	expected = "FizzBuzz"
+	if expected != result {
 		t.Errorf("it should say %q but get %q", expected, result)
 	}
 }
